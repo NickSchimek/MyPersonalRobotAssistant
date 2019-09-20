@@ -8,11 +8,11 @@ end
 
 post '/' do
   data = JSON.parse request.body.read
-
+  user = data['user']
   rc = HTTP.post("https://slack.com/api/chat.postMessage", params: {
     token: ENV['SLACK_API_TOKEN'],
     channel: '#botleytestchannel',
-    text: 'hello <@poppa_nick>'
+    text: "hello <@#{user}>"
   })
   logger.info JSON.pretty_generate(JSON.parse(rc.body))
   :ok
