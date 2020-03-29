@@ -8,11 +8,10 @@ task :meetings do
   one_day = 86400
   tomorrow = Time.now.utc + one_day
   rc = HTTP.get('https://www.agileventures.org/events.json')
-
   message = header
   JSON.parse(rc.body).each do |event|
     if event_start_time(event) < tomorrow
-      message += "#{event['title']} at: #{event_start_time(event).utc}\n"
+      message += "#{event['title']}: <!date^#{event_start_time(event).to_i}^{date_short_pretty} at {time}|#{event_start_time(event).utc}>}\n"
     end
   end
   message += footer
