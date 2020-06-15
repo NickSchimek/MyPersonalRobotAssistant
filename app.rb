@@ -12,7 +12,7 @@ post '/' do
 
   HTTP.post("https://slack.com/api/chat.postMessage", params: {
     token: ENV['SLACK_API_TOKEN'],
-    channel: '#botleytestchannel',
+    channel: '#recordsponge_new_contributors',
     text: text(user),
     blocks: blocks(user)
   })
