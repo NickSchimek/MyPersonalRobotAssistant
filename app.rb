@@ -82,6 +82,13 @@ def blocks user
       'type': 'section',
       'text': {
         'type': 'plain_text',
+        'text': 'Our slack channels: #recordsponge #recordsponge_new_contributors #recordsponge_dev #recordsponge_web_presence #recordsponge_legislation-advocacy'
+      }
+    },
+    {
+      'type': 'section',
+      'text': {
+        'type': 'plain_text',
         'text': 'Welcome aboard!',
         'emoji': true
       }
