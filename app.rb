@@ -26,7 +26,7 @@ Here are some project resources to get started:
 1. Our website: recordsponge.com
 2. Our <https://calendar.google.com/calendar?cid=bGo4aW91MTFwZ2ZlZnE3ZG12MGQ0M2FrcGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ|meetings calendar>
 3. Our <https://github.com/codeforpdx/recordexpungPDX/|github repo>
-Our slack channels: #recordsponge #recordsponge_new_contributors #recordsponge_dev #recordsponge_web_presence #recordsponge_legislation-advocacy
+4. Our slack channels: #recordsponge #recordsponge_new_contributors #recordsponge_dev #recordsponge_web_presence #recordsponge_legislation-advocacy
 Welcome aboard!
 HEREDOC
 end
@@ -83,7 +83,7 @@ def blocks user
       'type': 'section',
       'text': {
         'type': 'mrkdwn',
-        'text': 'Our slack channels: #recordsponge #recordsponge_new_contributors #recordsponge_dev #recordsponge_web_presence #recordsponge_legislation-advocacy'
+        'text': '4. Our slack channels: #recordsponge #recordsponge_new_contributors #recordsponge_dev #recordsponge_web_presence #recordsponge_legislation-advocacy'
       }
     },
     {
