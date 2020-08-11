@@ -3,11 +3,14 @@ require 'json'
 
 desc 'Slack a list of AV meetings to general'
 task :meetings do
+  events_url = 'https://www.agileventures.org/events'
+
   header = "<!here> are the events for the next 24 hours. Hosted by AV members.\n\n"
-  footer = "\nCome join us!"
+  events_calendar = "<#{events_url}|Agile Ventures calendar>"
+  footer = "\nCome join us!\nTo stay up to date with our events, check out the #{events_calendar}."
   one_day = 86400
   tomorrow = Time.now.utc + one_day
-  rc = HTTP.get('https://www.agileventures.org/events.json')
+  rc = HTTP.get("#{events_url}.json")
   message = header
   JSON.parse(rc.body).each do |event|
     if event_start_time(event) < tomorrow
